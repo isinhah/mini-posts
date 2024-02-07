@@ -11,6 +11,8 @@ public class UserDTO implements Serializable {
 
     public UserDTO() {}
 
+    public UserDTO(String id, String name, String email) {}
+
     //Construtor a partir da entidade
     public UserDTO(User obj) {
         id = obj.getId();
