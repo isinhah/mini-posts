@@ -1,5 +1,6 @@
 package com.dev.springmongodb.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -16,7 +17,7 @@ public class User implements Serializable {
     private String name;
     private String email;
 
-    @DBRef(lazy = true) //Referenciando a coleção Post dentro de posts em User + Vai acessar os posts se eu chamar
+    @DBRef //Referenciando a coleção Post dentro de posts em User + Vai acessar os posts se eu chamar
     private List<Post> posts = new ArrayList<>();
     public User() {}
 

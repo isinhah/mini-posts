@@ -18,8 +18,6 @@ public class Post implements Serializable {
 
     private AuthorDTO author;
 
-    public Post(Object o, Date parse, String partiuViagem, String s) {}
-
     public Post(String id, Date date, String title, String body, AuthorDTO author) {
         this.id = id;
         this.date = date;
