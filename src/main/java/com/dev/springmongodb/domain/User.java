@@ -17,7 +17,7 @@ public class User implements Serializable {
     private String name;
     private String email;
 
-    @DBRef //Referenciando a coleção Post dentro de posts em User + Vai acessar os posts se eu chamar
+    @DBRef(lazy = true) //Referenciando a coleção Post dentro de posts em User + Vai acessar os posts se eu chamar
     private List<Post> posts = new ArrayList<>();
     public User() {}
 
